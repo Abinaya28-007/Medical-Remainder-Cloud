@@ -1,0 +1,135 @@
+/* ========== Medication History Styles Upgrade ========== */
+.history-wrapper {
+    width: 100%;
+    max-width: 1000px;
+    margin: 32px auto;
+    padding: 0 24px;
+}
+
+.history-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px;
+    box-shadow: var(--shadow-sm);
+}
+
+.history-card h2 {
+    color: #1e3a8a;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* History Filters */
+.history-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.filter-tabs {
+    display: flex;
+    background: #f1f5f9;
+    padding: 4px;
+    border-radius: var(--radius-sm);
+    gap: 2px;
+}
+
+.filter-btn {
+    background: none;
+    border: none;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-btn:hover {
+    color: var(--text);
+}
+
+.filter-btn.active {
+    background: var(--card-bg);
+    color: var(--primary);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Date Filters */
+.date-filter-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.date-filter-group input {
+    padding: 6px 12px;
+    font-size: 13px;
+    width: auto;
+}
+
+/* Status cell styling */
+.status-cell {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: capitalize;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.status-cell.taken { color: #059669; }
+.status-cell.taken .status-dot { background-color: var(--accent); }
+
+.status-cell.missed { color: #dc2626; }
+.status-cell.missed .status-dot { background-color: var(--danger); }
+
+.status-cell.pending { color: #d97706; }
+.status-cell.pending .status-dot { background-color: var(--warning); }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .history-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filter-tabs {
+        width: 100%;
+        overflow-x: auto;
+    }
+    
+    .filter-btn {
+        flex: 1;
+        text-align: center;
+    }
+    
+    .date-filter-group {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .date-filter-group input {
+        flex: 1;
+    }
+}

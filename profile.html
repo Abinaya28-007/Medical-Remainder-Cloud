@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Settings - MediTrack</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <header>
+        <!-- Dynamic navigation header injected by nav-loader.js -->
+    </header>
+
+    <div class="profile-wrapper">
+        <div class="profile-grid">
+            
+            <!-- Left Side: Profile Card Summary -->
+            <div class="profile-summary-card">
+                <div class="avatar-container">
+                    <div class="avatar-placeholder" id="avatarDisplay">U</div>
+                    <div class="avatar-edit-badge" title="Change Avatar" onclick="showToast('Avatar image upload is not configured on this simulator.', 'info')">📷</div>
+                </div>
+                
+                <div class="profile-summary-info">
+                    <h3 id="displayProfileName">Loading User...</h3>
+                    <p id="displayProfileEmail">loading@example.com</p>
+                </div>
+
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <span class="stat-item-val" id="statActiveCount">0</span>
+                        <span class="stat-item-lbl">Active Meds</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-item-val" id="statTakenCount">0</span>
+                        <span class="stat-item-lbl">Taken Today</span>
+                    </div>
+                </div>
+
+                <div class="profile-meta-details">
+                    <span>🗓️</span> <span id="joinedDateDisplay">Member since Aug 2026</span>
+                </div>
+            </div>
+
+            <!-- Right Side: Detailed Settings Form -->
+            <div class="profile-settings-card">
+                <h2>⚙️ Account Settings</h2>
+
+                <form id="profileForm" class="profile-form" novalidate>
+                    
+                    <!-- Section 1: Personal Info -->
+                    <div class="section-divider">
+                        <span>👤</span> Personal Information
+                    </div>
+                    
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label for="userName">Full Name</label>
+                            <div class="input-container">
+                                <span class="input-icon">👤</span>
+                                <input type="text" id="userName" name="userName" placeholder="Enter your full name" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="age">Age (Years)</label>
+                            <div class="input-container">
+                                <span class="input-icon">🎂</span>
+                                <input type="number" id="age" name="age" min="1" max="120" placeholder="e.g. 35" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="gender">Gender</label>
+                            <div class="input-container">
+                                <span class="input-icon">⚥</span>
+                                <select id="gender" name="gender" required>
+                                    <option value="">-- Select Gender --</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Other">Other/Prefer not to say</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 2: Contact Info -->
+                    <div class="section-divider">
+                        <span>📞</span> Contact Information
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <div class="input-container">
+                                <span class="input-icon">📞</span>
+                                <input type="tel" id="phone" name="phone" placeholder="e.g. +1 234 567 890" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="userEmail">Email Address</label>
+                            <div class="input-container">
+                                <span class="input-icon">✉️</span>
+                                <input type="email" id="userEmail" name="userEmail" placeholder="Enter Email" readonly>
+                                <span class="input-lock-icon" title="Contact support to change email">🔒</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-save-profile">
+                        <span>💾</span> Save Settings
+                    </button>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="js/nav-loader.js"></script>
+    <script type="module" src="js/profile.js"></script>
+
+</body>
+
+</html>

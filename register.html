@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - MediTrack</title>
+    <!-- Core and specific stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <header>
+        <!-- Dynamic header injected by nav-loader.js -->
+    </header>
+
+    <div class="auth-wrapper">
+        <div class="auth-container">
+            <div class="auth-header">
+                <h2>Create Account</h2>
+                <p>Register to start tracking your medicine schedules</p>
+            </div>
+
+            <form id="registerForm" novalidate>
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <div class="input-wrapper">
+                        <input type="text" id="name" placeholder="e.g. John Doe" required>
+                    </div>
+                    <div class="error-msg"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <div class="input-wrapper">
+                        <input type="email" id="email" placeholder="e.g. name@example.com" required>
+                    </div>
+                    <div class="error-msg"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-wrapper">
+                        <input type="password" id="password" placeholder="Min. 6 characters" required>
+                        <span class="password-toggle" data-target="password">👁️‍🗨️</span>
+                    </div>
+                    <div class="error-msg"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <div class="input-wrapper">
+                        <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+                        <span class="password-toggle" data-target="confirmPassword">👁️‍🗨️</span>
+                    </div>
+                    <div class="error-msg"></div>
+                </div>
+
+                <button type="submit" class="auth-submit-btn">Register</button>
+
+                <div class="auth-footer">
+                    Already have an account? <a href="login.html">Login here</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Script imports -->
+    <script type="module" src="js/nav-loader.js"></script>
+    <script type="module" src="js/auth.js"></script>
+
+</body>
+
+</html>

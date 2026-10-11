@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medication History - MediTrack</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/history.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <header>
+        <!-- Injected dynamically by nav-loader.js -->
+    </header>
+
+    <div class="history-wrapper">
+        <div class="history-card">
+            <h2>⏳ Medication History</h2>
+
+            <!-- Filtering Controls -->
+            <div class="history-controls">
+                <div class="filter-tabs">
+                    <button class="filter-btn active" data-filter="All">All</button>
+                    <button class="filter-btn" data-filter="Taken">Taken</button>
+                    <button class="filter-btn" data-filter="Missed">Missed</button>
+                    <button class="filter-btn" data-filter="Pending">Pending</button>
+                </div>
+
+                <div class="date-filter-group">
+                    <label for="filterDate">Filter Date:</label>
+                    <input type="date" id="filterDate">
+                    <button class="btn btn-secondary" id="clearDateBtn" style="padding: 6px 12px; font-size:12px;">Clear</button>
+                </div>
+            </div>
+
+            <!-- Table of History Logs -->
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date Logged</th>
+                            <th>Medicine</th>
+                            <th>Dosage</th>
+                            <th>Reminder Time</th>
+                            <th>Logged Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historyTable">
+                        <tr>
+                            <td colspan="5" style="text-align: center; color: var(--text-muted); padding: 40px;">
+                                Loading medication logs...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="js/nav-loader.js"></script>
+    <script type="module" src="js/history.js"></script>
+
+</body>
+
+</html>

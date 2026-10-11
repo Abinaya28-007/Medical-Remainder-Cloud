@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Medicine - MediTrack</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/medicine.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <header>
+        <!-- Injected dynamically by nav-loader.js -->
+    </header>
+
+    <div class="med-page-wrapper">
+        <div class="card-container">
+            <h2>Add New Medication</h2>
+
+            <form id="medicineForm" novalidate>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="medicineName">Medicine Name</label>
+                        <input type="text" id="medicineName" name="medicineName" placeholder="e.g. Paracetamol" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dosage">Dosage</label>
+                        <input type="text" id="dosage" name="dosage" placeholder="e.g. 500 mg, 1 tablet" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="frequency">Frequency</label>
+                        <select id="frequency" name="frequency" required>
+                            <option value="">-- Select Frequency --</option>
+                            <option value="Daily">Daily</option>
+                            <option value="Twice a Day">Twice a Day</option>
+                            <option value="Thrice a Day">Thrice a Day</option>
+                            <option value="Weekly">Weekly</option>
+                            <option value="As Needed">As Needed/PRN</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="time">Reminder Time</label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="startDate">Start Date</label>
+                        <input type="date" id="startDate" name="startDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="endDate">End Date</label>
+                        <input type="date" id="endDate" name="endDate" required>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="food">Food Preference</label>
+                        <select id="food" name="food" required>
+                            <option value="">-- Select Food Preference --</option>
+                            <option value="Before Food">Before Food</option>
+                            <option value="After Food">After Food</option>
+                            <option value="With Food">With Food</option>
+                            <option value="No Preference">No Preference</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="notes">Notes / Special Instructions</label>
+                        <textarea id="notes" name="notes" placeholder="e.g. Take after breakfast, do not chew, etc."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <a href="medicine-list.html" class="btn btn-secondary">Cancel</a>
+                    <button type="submit" class="btn btn-primary">Save Medication</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="js/nav-loader.js"></script>
+    <script type="module" src="js/medicine.js"></script>
+
+</body>
+
+</html>

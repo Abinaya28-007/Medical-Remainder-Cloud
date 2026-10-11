@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - MediTrack</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <header>
+        <!-- Dynamic header injected by nav-loader.js -->
+    </header>
+
+    <div class="dashboard-wrapper">
+        <!-- Welcome Banner -->
+        <div class="welcome-banner">
+            <div class="welcome-text">
+                <h1 id="welcomeUser">Welcome, User 👋</h1>
+                <p>Track, manage and take control of your medication schedules with peace of mind.</p>
+            </div>
+        </div>
+
+        <!-- Quick Action Grid -->
+        <div class="quick-actions">
+            <a href="add-medicine.html" class="action-card">
+                <div class="action-card-icon">➕</div>
+                <span>Add Medicine</span>
+            </a>
+            <a href="medicine-list.html" class="action-card">
+                <div class="action-card-icon">📋</div>
+                <span>View Medicines</span>
+            </a>
+            <a href="history.html" class="action-card">
+                <div class="action-card-icon">⏳</div>
+                <span>View History</span>
+            </a>
+            <a href="profile.html" class="action-card">
+                <div class="action-card-icon">👤</div>
+                <span>Profile Settings</span>
+            </a>
+        </div>
+
+        <!-- Statistics Section -->
+        <div class="stats-grid">
+            <div class="stat-card active-meds">
+                <span class="stat-title">Active Schedule</span>
+                <span class="stat-value" id="activeMedsCount">0</span>
+            </div>
+            <div class="stat-card taken">
+                <span class="stat-title">Taken Today</span>
+                <span class="stat-value" id="takenTodayCount">0</span>
+            </div>
+            <div class="stat-card missed">
+                <span class="stat-title">Missed Today</span>
+                <span class="stat-value" id="missedTodayCount">0</span>
+            </div>
+            <div class="stat-card pending">
+                <span class="stat-title">Total Registered</span>
+                <span class="stat-value" id="totalMedsCount">0</span>
+            </div>
+        </div>
+
+        <!-- Today's Medicines -->
+        <div class="meds-section">
+            <div class="section-header">
+                <h2>📅 Today's Medications</h2>
+                <span class="section-header-date" id="currentDateDisplay">Date</span>
+            </div>
+
+            <div class="meds-list" id="todayMedsList">
+                <div style="text-align: center; color: var(--text-muted); padding: 24px;">
+                    Loading today's schedule...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="js/nav-loader.js"></script>
+    <script type="module" src="js/dashboard.js"></script>
+
+</body>
+
+</html>
